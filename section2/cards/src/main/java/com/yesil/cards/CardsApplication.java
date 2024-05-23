@@ -1,4 +1,4 @@
-package com.yesil.account;
+package com.yesil.cards;
 
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
@@ -13,29 +13,27 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
 @OpenAPIDefinition(
 		info = @Info(
-				title = "Accounts microservice REST API Documentation",
-				description = "EBank Accounts microservice REST API Documentation",
+				title = "Cards microservice REST API Documentation",
+				description = "EBank Cards microservice REST API Documentation",
 				version = "v1",
 				contact = @Contact(
-						name = "yesilc",
-						email = "omercanyesil@gmail.com",
+						name = "Madan Reddy",
+						email = "tutor@yesilc.com",
 						url = "https://www.yesilc.com"
 				),
 				license = @License(
 						name = "Apache 2.0",
-						url = "https://www.yesil.com"
+						url = "https://www.yesilc.com"
 				)
 		),
 		externalDocs = @ExternalDocumentation(
-				description =  "EBank Accounts microservice REST API Documentation",
+				description = "EBank Cards microservice REST API Documentation",
 				url = "https://www.yesilc.com/swagger-ui.html"
 		)
 )
-public class AccountApplication {
+public class CardsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AccountApplication.class, args);
-
+		SpringApplication.run(CardsApplication.class, args);
 	}
-
 }

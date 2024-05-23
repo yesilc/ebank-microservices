@@ -12,7 +12,6 @@ import com.yesil.account.mapper.CustomerMapper;
 import com.yesil.account.repository.AccountsRepository;
 import com.yesil.account.repository.CustomerRepository;
 import com.yesil.account.service.IAccountService;
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -87,7 +86,6 @@ public class AccountsServiceImpl implements IAccountService {
      * @param mobileNumber the mobile number
      * @return boolean
      */
-    @Transactional
     @Override
     public boolean deleteAccount(String mobileNumber) {
         Customer customer = customerRepository.findByMobileNumber(mobileNumber).orElseThrow(
